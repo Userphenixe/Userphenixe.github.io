@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<title> Assignment solution for modul 2</title>
+	<style type="text/css">
+		* {
+	box-sizing: border-box;
+}
+  header {
+	background-color: gray;
+	width: 100%;
+	padding: 18px;
+}
+ h3 {
+ 	width: 80%;
+ 	font-style: initial;
+ 	font-size: 30px;
+ 	margin-left: 25px;
+ }
+h1 {
+	text-align: center;
+	font-size: 50px;
+	font-style: initial;
+}
+body {
+	background-color: white;
+}
+p {
+	margin-top: 80px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+div {
+	background-color: gray;
+	font-style: initial;
+	font-size: 20px;
+	border: 1px solid black ;
+	margin: 20px 20px 20px;
+}
+section {
+	display: flex;
+	position: relative;
+}
+.first {
+	margin: 0px 0px 0px;
+	padding: 15px;
+	width: 80%;
+	color: black;
+	border: 5px solid black;
+	float: right;
+	text-align: center;
+    font-size: 30px;
+    font-style: initial;
+    background-color: purple;
+}
+.second {
+	margin: 0px 0px 0px;
+	padding: 15px;
+	width: 80%;
+	color: white;
+	background-color: orange;
+	float: right;
+	text-align: center;
+	border: 5px solid black;
+	font-size: 30px;
+	font-style: initial;
+}
+.third {
+	margin: 0px 0px 0px;
+	padding: 15px;
+	width: 80%;
+	color: black;
+	background-color: yellow;
+	float: right;
+	text-align: center;
+	border: 5px solid black;
+	font-size: 30px;
+	font-style: initial;
+}
+.margin {
+	margin-bottom: 199px;
+}
+.margin_2 {
+	margin-bottom: 88px;
+}
+@media (min-width: 992px)
+{
+	.column-lg-4 {
+		float: left;
+		width: 33.33%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px)
+{
+	.colmn-md-6 {
+		float: left;
+		width: 50%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.colmn-md-12 {
+		float: left;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+@media (max-width: 767px)
+{
+	.colmn-sm-12 {
+		float: left;
+		width: 100%;
+	}
+}
+.navbar{
+	border-radius: 0px;
+	background-color: rgba(0,0,0,0.8);
+}
+#top{
+
+}
+.navbar-brand{
+  font-size: 35px;
+  color: white;
+  padding-left: 25px;
+}
+.navbar-brand:hover{
+	color: white;
+}
+.nav{
+	margin: 0;
+	padding: 0;
+}
+.navbar-nav{
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.navbar-toggle{
+	border: 2px solid white;
+	margin-right: 25px;
+}
+.icon-bar{
+	background-color: white;
+}
+	</style>
+</head>
+<body>
+	<nav class="navbar" id="top">
+  	<div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Food, LLC</a>
+    </div>
+
+    <div class="collapse" id="myNavbar">
+      <ul class="nav navbar-nav visible-xs">
+        <li><a class="menu-item" href="#">Chicken</a></li>
+        <li><a class="menu-item" href="#">Beef</a></li> 
+        <li><a class="menu-item" href="#">Sushi</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+<h1>
+	Our Menu
+</h1>
+<section class="column-lg-4 colmn-md-6 colmn-sm-12">
+	<div>
+			<h2 class="first">
+				Chicken
+			</h2>
+			<p class="margin">
+			The chicken (Gallus gallus domesticus) is a domesticated junglefowl species, with attributes of wild species such as the grey and the Ceylon junglefowl[1] that are originally from Southeast Asia. Rooster and cock are terms for adult male birds, and a younger male may be called a cockerel. A male that has been castrated is a capon. An adult female bird is called a hen, and a sexually immature female is called a pullet. Humans keep chickens primarily as a source of food (consuming both their meat and eggs) or as pets. Traditionally they were also bred for cockfighting, which is still practiced in some places. Chickens domesticated for meat are broilers and for eggs are layers.
+		</p>
+	</div>
+</section>
+<section class="column-lg-4 colmn-md-6 colmn-sm-12">
+	<div>
+			<h2 class="second">
+				Beef
+			</h2>
+			<p>
+			In prehistoric times, humankind hunted aurochs and later domesticated them. Since that time, numerous breeds of cattle have been bred specifically for the quality or quantity of their meat. Today, beef is the third most widely consumed meat in the world, after pork and poultry. As of 2018, the United States, Brazil, and China were the largest producers of beef.
+			Beef can be prepared in various ways; cuts are often used for steak, which can be cooked to varying degrees of doneness, while trimmings are often ground or minced, as found in most hamburgers. Beef contains protein, iron, and vitamin B12. Along with other kinds of red meat, high consumption is associated with an increased risk of colorectal cancer and coronary heart disease, especially when processed. Beef has a high environmental impact, being a primary driver of deforestation with the highest greenhouse gas emissions of any agricultural product.
+		</p>
+	</div>
+</section>
+<section class="column-lg-4 colmn-md-12 colmn-sm-12">
+	<div>
+			<h2 class="third">
+				Sushi
+			</h2>
+			<p class="margin_2">
+			The inventor of modern sushi is believed to be Hanaya Yohei, who invented nigiri-zushi, a type of sushi most known today, in which seafood is placed on hand-pressed vinegared rice, around 1824 in the Edo period (1603–1867). It was the fast food of the chōnin class in the Edo period.[2][3][4]
+			Sushi is traditionally made with medium-grain white rice, though it can be prepared with brown rice or short-grain rice. It is very often prepared with seafood, such as squid, eel, yellowtail, salmon, tuna or imitation crab meat. Many types of sushi are vegetarian. It is often served with pickled ginger (gari), wasabi, and soy sauce. Daikon radish or pickled daikon (takuan) are popular garnishes for the dish.
+			Sushi is sometimes confused with sashimi, a similar dish in Japanese cuisine that consists of thinly sliced raw fish or occasionally meat.[5]
+		</p>
+	</div>
+</section>
+</body>
+</html>
