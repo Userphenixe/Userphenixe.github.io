@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Formulaire_Reservation
+	</title>
+	<style type="text/css">
+		form {
+			align-content: center;
+			margin-top: 25px;
+			margin-left: 455px;
+			margin-right: 455px;
+			margin-bottom: 25px;
+			padding: 15px;
+		}
+		input {
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+		body {
+			text-align: center;
+			background-color: #FFEBCD;
+		}
+		div {
+			margin-left: 0px;
+			width: 90%;
+			text-align: center;
+		    margin-bottom: 15px;
+		    margin-right: 850px;
+		}
+	</style>
+</head>
+<body>
+	<h2>
+		Formulaire de reservation
+	</h2>
+<form action="envoyer.html">
+	<div id="vide" style="color: red"></div>
+	<label for="nom">Votre Nom</label>
+	<input type="text" name="nom" id="name"> <br>
+	<label for="email">Votre Email</label>
+	<input type="email" name="email" id="email"> <br>
+	<label for="CIN">Votre CIN</label>
+	<input type="char[8]" name="CIN" id="CIN"> <br>
+	<label for="age">Votre age</label>
+	<input type="number" name="age" id="age"> <br>
+	<div id="error" style="color: red" ></div> <br>
+	<label for="personnes">Nombe de personnes</label> 
+	<input type="number" name="personnes" id="personnes"> <br>
+	<div id="persone" style="color: red"></div><br>
+	<label for="chambre">Gamme de chambre</label> 
+	<select id="chambre">
+		<option value="standard">Standard</option>
+		<option value="prestige">Prestige</option>
+		<option value="platinum">Platinum</option>
+	</select><br>
+	<label for="entree">Date de reservation</label>
+	<input type="Date" name="entree" id="entree"><br>
+	<label for="sortie">Date de sortie</label>
+	<input type="Date" name="sortie" id="sortie"><br>
+	<div id="parfait" style="color: red"></div><br>
+	<button onclick="verifierAge();verifierdate();verifierpersonnes();verifierchamp();getnom();getsortie();getentree();getchambre();getpersonnes()">Select</button>	
+</form>
+<script type="text/javascript">
+	function verifierAge(){
+		var X;
+		X=document.getElementById('age').value;
+		if(X<18) 
+		{ 
+			document.getElementById('error').innerHTML="vous etes mineur, vous pouvez pas reserver";
+			event.preventDefault();
+		}
+		else
+			document.getElementById('error').innerHTML="";
+	}
+function verifierdate(){
+		var Y, T;
+		Y=document.getElementById('entree').value;
+		T=document.getElementById('sortie').value;
+		if (Y>T)
+		{
+			document.getElementById('parfait').innerHTML="reservation illogique";
+			event.preventDefault();
+		}
+		else
+			document.getElementById("parfait").innerHTML="";
+	}
+function verifierpersonnes(){
+		var I;
+		I=document.getElementById('personnes').value;
+		if (I>3 || I<1)
+		{
+			document.getElementById('persone').innerHTML="vous avez depasse le nombre limite des personnes pour un reservation";
+			event.preventDefault();
+		}
+		else
+			document.getElementById('persone').innerHTML="";
+	}
+	function verifierchamp(){
+		var a, b, c, d, e, f, g, h;
+		a=document.getElementById('name').value;
+		b=document.getElementById('age').value;
+		c=document.getElementById('CIN').value;
+		d=document.getElementById('email').value;
+		e=document.getElementById('personnes').value;
+		f=document.getElementById('chambre').value;
+		g=document.getElementById('entree').value;
+		h=document.getElementById('sortie').value;
+		if (a===""||b===""||c===""||d===""||e===""||f===""||g===""||h==="")
+		{
+			document.getElementById('vide').innerHTML="il existe un ou plusieurs champ vide, vueillez le remplie s'il vous plait";
+			event.preventDefault();
+		}
+		else
+		{
+			document.getElementById('vide').innerHTML="";
+		}
+	}
+	function getnom(){
+		var nom_value = document.getElementById('name').value;
+		localStorage.setItem("passvalue",nom_value);
+	}
+	function getentree(){
+		var date_entree = document.getElementById('entree').value;
+		localStorage.setItem("date1value",date_entree);
+	}
+	function getsortie(){
+		var date_sortie = document.getElementById('sortie').value;
+		localStorage.setItem("date2value",date_sortie);
+	}
+	function getpersonnes(){
+		var person = document.getElementById('personnes').value;
+		localStorage.setItem("personnesvalue",person);
+	}
+	function getchambre(){
+		var chambree = document.getElementById('chambre').value;
+		localStorage.setItem("chambrevalue",chambree);
+	}
+</script>
+</body>
+</html>
+
