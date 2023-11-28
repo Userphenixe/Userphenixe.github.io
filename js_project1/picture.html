@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../project/undo.js"></script>
+    <script src="../project/update.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>Two Pictures</title>
+</head>
+
+<body>
+    <div class="image-container" onmouseover="upDate()" onmouseout="undo()">
+        <img src="https://thumbs.dreamstime.com/b/golden-retriever-dog-21668976.jpg" alt="Picture 1">
+        <p>Picture 1</p>
+    </div>
+
+    <div class="image-container" onmouseover="upDate()" onmouseout="undo()">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*" alt="Picture 2">
+        <p>Picture 2</p>
+    </div>
+</body>
+
+</html>
