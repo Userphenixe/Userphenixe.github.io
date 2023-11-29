@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gallery">
+    <figure tabindex="0">
+      <img src="https://img-3.journaldesfemmes.fr/a5LFTZ3qU2fUVOmwIVKDJawBJXA=/1500x/smart/83c0e4f55dd846dea2be0be27e715dcd/ccmcms-jdf/10662446.jpg" alt="Description 1">
+      <figcaption>Image 1</figcaption>
+    </figure>
+   <figure tabindex="1">
+      <img src="https://www.jaimefruitsetlegumes.ca/wp-content/uploads/2019/09/Fiche-aliment-Images-36-700x700.png" alt="Description 2">
+      <figcaption>Image 2</figcaption>
+    </figure>
+    <figure tabindex="2">
+      <img src="https://buymassry.com/images/detailed/19/Orange_Baladi_Agreen.jpg" alt="Description 3">
+      <figcaption>Image 3</figcaption>
+    </figure>
+    <figure tabindex="3">
+      <img src="https://superetti.dz/wp-content/uploads/2022/05/orange-biomarche-de-goma.png" alt="Description 4">
+      <figcaption>Image 4</figcaption>
+    </figure>
+    <figure tabindex="4">
+      <img src="https://img.passeportsante.net/1200x675/2021-05-03/i102115-orange-nu.webp" alt="Description 5">
+      <figcaption>Image 5</figcaption>
+    </figure>
+    <figure tabindex="5">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMeSnQS3tzpzVr1BBU6MpfFtCfXayHZU2LSzBPgnVahlbiMWcvVZLFQhQK9FrW7yut6oY&usqp=CAU" alt="Description 6">
+      <figcaption>Image 6</figcaption>
+    </figure>
+    <div id="main-image" role="img" aria-label="Main Image" style="background-image: url('');"></div>
+  </div>
+  <script src="gallery.js"></script>
+</body>
+</html>
